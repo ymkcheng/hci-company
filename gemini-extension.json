@@ -1,0 +1,6 @@
+{
+  "name": "hci-company",
+  "version": "1.0.0",
+  "description": "A top-tier HCI product company simulation — 6 specialized agents collaborate to design human-centered interactive experiences from a single problem statement.",
+  "contextFileName": "GEMINI.md"
+}
