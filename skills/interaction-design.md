@@ -1,40 +1,40 @@
-# Interaction Design Principles
+# 互動設計原則
 
-## When This Skill Activates
-When Aria (hci-interaction-designer) needs design pattern guidance.
+## 啟動時機
+當 Aria（hci-interaction-designer）需要設計模式指引時載入。
 
-## Core Heuristics (adapted from Nielsen & Shneiderman)
+## 核心啟發式原則（改編自 Nielsen 和 Shneiderman）
 
-1. **Visibility of system status**: The user always knows where they are, what is happening, and what to do next.
-2. **Match between system and real world**: Use language and concepts the user already knows. No jargon.
-3. **User control and freedom**: Always provide an exit. Undo is better than confirmation dialogs.
-4. **Consistency**: Same action → same result. Everywhere. Every time.
-5. **Error prevention**: Make it hard to do the wrong thing. Make it easy to recover.
-6. **Recognition over recall**: Show options instead of requiring memory.
-7. **Flexibility**: Support both novice (guided) and expert (shortcut) paths.
-8. **Aesthetic and minimalist design**: Every element earns its place. If it doesn't serve the user's current task, remove it.
+1. **系統狀態的可見性**：使用者永遠知道自己在哪裡、正在發生什麼、接下來要做什麼。
+2. **系統與真實世界的匹配**：使用使用者已經熟悉的語言和概念。不用術語。
+3. **使用者控制和自由**：永遠提供出口。復原比確認對話框好。
+4. **一致性**：同樣的動作 → 同樣的結果。每次。到處。
+5. **錯誤預防**：讓做錯的事很難做。讓恢復很容易。
+6. **辨識優於回憶**：顯示選項，不要要求記憶。
+7. **彈性**：同時支援新手（引導式）和老手（快捷）路徑。
+8. **美學和極簡設計**：每個元素都要值得存在。如果它不服務使用者的當前任務，移除它。
 
-## Feedback Design Matrix
+## 回饋設計矩陣
 
-| User Action | Immediate (<100ms) | Progress (100ms-5s) | Completion | Error |
+| 使用者動作 | 即時（< 100ms） | 進度（100ms-5s） | 完成 | 錯誤 |
 |---|---|---|---|---|
-| Tap button | Color/scale change | Spinner or progress | Success state | Shake + message |
-| Swipe | Element follows finger | Momentum animation | Snap to position | Rubber band back |
-| Submit form | Button disabled + loading | Progress indicator | Confirmation screen | Inline field errors |
-| Wait (system processing) | — | Skeleton screen or pulse | Content appears | Retry option |
+| 點擊按鈕 | 顏色或大小變化 | 載入指示 | 成功狀態 | 搖晃 + 訊息 |
+| 滑動 | 元素跟隨手指 | 慣性動畫 | 吸附到位 | 橡皮筋彈回 |
+| 提交表單 | 按鈕停用 + 載入中 | 進度指示器 | 確認畫面 | 行內欄位錯誤 |
+| 等待（系統處理） | — | 骨架畫面或脈動 | 內容出現 | 重試選項 |
 
-## Emotional Arc Template
+## 情感弧線模板
 ```
-Entry → Curiosity ("what is this?")
-  → Confidence ("I know what to do")
-    → Flow ("this feels natural")
-      → Accomplishment ("I did it")
-        → Closure ("I can leave feeling good")
+進入 → 好奇（「這是什麼？」）
+  → 信心（「我知道要做什麼」）
+    → 心流（「這感覺很自然」）
+      → 成就感（「我做到了」）
+        → 結束感（「我可以安心離開」）
 ```
 
-## Quality Checklist
-- [ ] Every screen has exactly one primary action
-- [ ] Feedback exists for every user action (no silent failures)
-- [ ] Error states guide toward resolution, not just report problems
-- [ ] The emotional arc aligns with the Design Brief's success definition
-- [ ] Edge cases are handled gracefully, not ignored
+## 品質檢查表
+- [ ] 每個畫面只有一個主要動作
+- [ ] 每個使用者動作都有回饋（沒有無聲的失敗）
+- [ ] 錯誤狀態引導使用者走向解決，不只是報告問題
+- [ ] 情感弧線對齊設計判斷書的成功定義
+- [ ] 邊界情境被優雅處理，不是被忽略

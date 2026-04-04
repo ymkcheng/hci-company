@@ -1,34 +1,34 @@
-# User Research Methodology
+# 使用者研究方法論
 
-## When This Skill Activates
-When Maya (hci-researcher) needs structured research methods.
+## 啟動時機
+當 Maya（hci-researcher）需要結構化的研究方法時載入。
 
-## Observation Techniques
+## 觀察技法
 
-### Contextual Inquiry
-Watch users in their natural environment. Note:
-- Physical context (where, when, lighting, noise)
-- Social context (alone, with others, distracted)
-- Tool context (what device, what other apps open)
-- Emotional context (rushed, relaxed, frustrated, bored)
+### 脈絡探查（Contextual Inquiry）
+在使用者的自然環境中觀察。記錄：
+- 物理脈絡（地點、時間、光線、噪音）
+- 社交脈絡（獨自、有人陪、被打擾）
+- 工具脈絡（什麼裝置、同時開著什麼 app）
+- 情緒脈絡（趕時間、放鬆、挫折、無聊）
 
-### Five Whys
-When you identify a behavior, ask "why" five times to reach the root cause.
-- Surface: "I check my phone before bed"
-- Why 1: "I want to make sure I didn't miss anything"
-- Why 2: "Missing a message makes me anxious"
-- Why 3: "I feel responsible for responding quickly"
-- Why 4: "People expect instant replies"
-- Why 5: "My self-worth is tied to being responsive"
-→ Root need: validation and connection, not information
+### 五個為什麼（Five Whys）
+發現一個行為後，連問五次「為什麼」來抵達根本原因。
+- 表面：「我睡前會滑手機」
+- 為什麼 1：「想確認沒有漏掉什麼」
+- 為什麼 2：「漏掉訊息讓我焦慮」
+- 為什麼 3：「我覺得自己有責任快速回覆」
+- 為什麼 4：「別人期待即時回應」
+- 為什麼 5：「我的自我價值跟回應速度綁在一起」
+→ 根本需求：被認可和連結感，不是資訊
 
-### Extreme Users
-Study people at the extremes — power users AND people who refuse to use the product.
-Both reveal design assumptions that the "average user" hides.
+### 極端使用者
+研究最極端的人——重度使用者和完全拒絕使用的人。
+兩者都能揭示「普通使用者」隱藏的設計假設。
 
-## Insight Quality Checklist
-- [ ] Based on observable behavior, not assumed preference
-- [ ] Specific enough to act on (not "users want convenience")
-- [ ] Reveals something the design team didn't already know
-- [ ] The hidden need is genuinely hidden (user wouldn't say it in an interview)
-- [ ] Context map includes time, place, emotional state, and workarounds
+## 洞察品質檢查表
+- [ ] 基於可觀察的行為，不是假設的偏好
+- [ ] 夠具體、可以據此行動（不是「使用者想要方便」）
+- [ ] 揭示了設計團隊還不知道的事
+- [ ] 隱藏需求是真正隱藏的（使用者在訪談中不會說出來）
+- [ ] 情境地圖包含時間、地點、情緒狀態和替代方案

@@ -1,58 +1,58 @@
-# Usability Testing Methodology
+# 使用性測試方法論
 
-## When This Skill Activates
-When Scout (hci-usability-tester) needs structured evaluation methods.
+## 啟動時機
+當 Scout（hci-usability-tester）需要結構化的評估方法時載入。
 
-## Three-Persona Walkthrough
+## 三視角走查法
 
-For each persona (Novice, Target User, Impatient User), walk through EVERY step in the user journey:
+針對每個視角（新手、目標使用者、急躁使用者），走過使用者旅程的每一步：
 
-### At Each Step, Record:
-1. **Can they find the action?** (Discoverability) — Is the next step obvious without reading instructions?
-2. **Can they perform the action?** (Operability) — Is the tap target large enough? Is the gesture natural?
-3. **Do they know it worked?** (Feedback) — Does the system respond clearly and quickly?
-4. **Do they know what to do next?** (Wayfinding) — Is the path forward clear?
-5. **How do they feel?** (Emotion) — Confident? Confused? Delighted? Frustrated?
+### 每一步記錄：
+1. **找得到嗎？**（可發現性）— 下一步是否不看說明就很明顯？
+2. **做得到嗎？**（可操作性）— 觸控目標夠大嗎？手勢自然嗎？
+3. **知道成功了嗎？**（回饋）— 系統回應夠清楚、夠快嗎？
+4. **知道下一步嗎？**（導航）— 往前的路清楚嗎？
+5. **感受如何？**（情緒）— 有信心？困惑？開心？挫折？
 
-### Red Flags (Automatic Critical Rating)
-- User cannot complete the core task at all
-- User performs action but nothing visible happens
-- User gets stuck in a loop with no exit
-- User data is lost without warning
-- Core functionality does not work on mobile
+### 紅旗（自動列為阻斷級）
+- 使用者完全無法完成核心任務
+- 使用者做了動作但什麼都沒發生
+- 使用者卡在迴圈裡找不到出口
+- 使用者資料不經警告就消失
+- 核心功能在手機上不能用
 
-### Yellow Flags (Automatic Major Rating)
-- User hesitates more than 5 seconds before acting
-- User taps the wrong element first
-- Error message does not explain how to fix
-- User completes task but expresses frustration
-- Important information requires scrolling to discover
+### 黃旗（自動列為困擾級）
+- 使用者猶豫超過 5 秒才行動
+- 使用者第一次按錯元素
+- 錯誤訊息沒說怎麼修正
+- 使用者完成任務但表達挫折
+- 重要資訊需要捲動才看到
 
-## Severity Classification
+## 嚴重度分級
 
-| Severity | Impact | Frequency | Priority |
+| 嚴重度 | 影響 | 頻率 | 優先級 |
 |---|---|---|---|
-| 🔴 Critical | Cannot complete core task | Any user | Fix before ship |
-| 🟡 Major | Completes with significant difficulty | Most users | Fix in this iteration |
-| 🟢 Minor | Small friction, completes easily | Some users | Fix when possible |
-| ⭐ Strength | Positive experience | — | Preserve and amplify |
+| 🔴 阻斷級 | 無法完成核心任務 | 任何使用者 | 上線前必修 |
+| 🟡 困擾級 | 有明顯困難但可完成 | 多數使用者 | 本次迭代修 |
+| 🟢 改善級 | 小摩擦，容易完成 | 部分使用者 | 有空時修 |
+| ⭐ 亮點 | 正面體驗 | — | 保留並放大 |
 
-## Root Cause Attribution
+## 根本原因歸屬
 
-Every finding must trace to a department:
+每個發現都必須追溯到負責部門：
 
-| Symptom | Likely Root Cause |
+| 症狀 | 可能的根本原因 |
 |---|---|
-| User doesn't understand what the product is for | Strategy (Simon) — unclear value proposition |
-| User can't find the main action | Design (Aria) — visual hierarchy problem |
-| Button doesn't respond | Engineering (Leo) — implementation bug |
-| Feature exists that contradicts the brief | Design (Aria) or Engineering (Leo) — scope creep |
-| Product works but doesn't feel right | Design (Aria) — emotional arc misaligned |
-| Product solves wrong problem | Strategy (Simon) or Research (Maya) — wrong insight |
+| 使用者不知道產品要做什麼 | 策略問題（Simon）— 價值主張不清楚 |
+| 使用者找不到主要動作 | 設計問題（Aria）— 視覺層次問題 |
+| 按鈕沒反應 | 工程問題（Leo）— 實作 bug |
+| 出現了判斷書排除的功能 | 設計（Aria）或工程（Leo）— 範圍蔓延 |
+| 產品能用但感覺不對 | 設計問題（Aria）— 情感弧線偏離 |
+| 產品解決了錯誤的問題 | 策略（Simon）或研究（Maya）— 洞察方向錯誤 |
 
-## Quality Checklist
-- [ ] All three personas tested across full journey
-- [ ] Every finding has a severity, root cause department, and recommended fix
-- [ ] At least one Strength is documented
-- [ ] Spec compliance is checked point by point
-- [ ] Success Definition is explicitly verified (Before → After state change)
+## 品質檢查表
+- [ ] 三個視角都測過完整旅程
+- [ ] 每個發現都有嚴重度、歸屬部門和建議修正
+- [ ] 至少記錄一個亮點
+- [ ] 規格符合度逐項檢查
+- [ ] 成功定義明確驗證（前後狀態是否真的改變）

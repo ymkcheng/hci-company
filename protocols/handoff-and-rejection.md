@@ -1,96 +1,83 @@
-# Handoff & Rejection Protocol
+# 交付與退回協議
 
-This protocol governs how work flows between departments and when Victor (CEO) sends work back.
+本協議規範部門之間的工作流動，以及 Victor（執行長）何時退回工作。
 
-## Delivery Chain (Happy Path)
+## 正常交付鏈
 
 ```
-Boss (Human)
-  ↓ problem statement
-Victor (CEO)
-  ↓ delegates
-Maya (Research) → delivers User Insight Report → Victor reviews
-  ↓ approved
-Simon (Strategy) → delivers Design Brief → Victor reviews
-  ↓ approved
-Aria (Design) → delivers Interaction Spec → Victor reviews
-  ↓ approved
-Leo (Engineering) → delivers Working Prototype → Victor reviews
-  ↓ approved
-Scout (Testing) → delivers Usability Report → Victor reviews
-  ↓ no critical issues
-Victor → compiles Final Report → Boss
+老闆（人類）
+  ↓ 問題描述
+Victor（執行長）
+  ↓ 委派
+Maya（研究部）→ 交付使用者洞察報告 → Victor 審查
+  ↓ 核准
+Simon（策略部）→ 交付設計判斷書 → Victor 審查
+  ↓ 核准
+Aria（設計部）→ 交付互動規格書 → Victor 審查
+  ↓ 核准
+Leo（工程部）→ 交付可運行原型 → Victor 審查
+  ↓ 核准
+Scout（測試部）→ 交付使用性報告 → Victor 審查
+  ↓ 無嚴重問題
+Victor → 彙整最終報告 → 老闆
 ```
 
-## Rejection Rules
+## 退回規則
 
-### Who Can Reject Whom
+### 誰可以退回誰
 
-| Rejector | Can Reject | Condition |
+| 退回者 | 可退回 | 條件 |
 |---|---|---|
-| Victor | Anyone | Quality does not meet standards |
-| Scout | Aria (via Victor) | Usability issue rooted in design |
-| Scout | Simon (via Victor) | Usability issue rooted in strategy |
-| Scout | Leo (via Victor) | Usability issue rooted in implementation |
-| Leo | Aria (via Victor) | Technical impossibility in the spec |
-| Simon | Maya (via Victor) | Research too shallow for strategic decision |
+| Victor | 任何部門 | 品質未達標準 |
+| Scout | Aria（透過 Victor） | 使用性問題根源在設計 |
+| Scout | Simon（透過 Victor） | 使用性問題根源在策略 |
+| Scout | Leo（透過 Victor） | 使用性問題根源在實作 |
+| Leo | Aria（透過 Victor） | 規格書中有技術不可行的項目 |
+| Simon | Maya（透過 Victor） | 研究不夠深、無法做策略決定 |
 
-**All rejections go THROUGH Victor.** No department contacts another directly. Victor reads the rejection reason, validates it, and forwards it with his own directive.
+**所有退回都經過 Victor。** 部門之間不直接聯繫。Victor 讀退回原因，驗證其合理性，再附上自己的指示轉發。
 
-### Rejection Message Format
-
-When Victor rejects a deliverable:
+### 退回訊息格式
 
 ```
-【退回】部門：[department name] / [agent name]
-【原因】[specific quote from the deliverable that is insufficient]
-【問題】[why this does not meet the standard]
-【期望】[what the revision should achieve]
+【退回】部門：[部門名稱] / [負責人名字]
+【原因】[引用交付物中不合格的具體段落]
+【問題】[為什麼不符合標準]
+【期望】[修訂版應達到什麼]
 【動作】請修正後重新提交
 ```
 
-### Maximum Rejection Rounds
+### 最大退回次數
 
-- Each phase allows a maximum of **3 rejection rounds**
-- Round 1: Full feedback with detailed expectations
-- Round 2: Focused feedback on remaining issues only
-- Round 3: If still insufficient, Victor accepts with explicit limitations noted
+- 每個階段最多 **3 輪退回**
+- 第 1 輪：完整意見加詳細期望
+- 第 2 輪：只針對剩餘問題
+- 第 3 輪：仍不合格則強制接受，附上已知限制
 
-On Round 3 forced acceptance:
+第 3 輪強制接受格式：
 ```
-【有條件接受】部門：[department name]
-【已知限制】[list unresolved issues]
-【風險】[impact of these limitations on the final product]
+【有條件接受】部門：[部門名稱]
+【已知限制】[未解決問題清單]
+【風險】[這些限制對最終產品的影響]
 【處置】記錄於最終報告，建議下一迭代優先處理
 ```
 
-## Feedback Loop (When Scout Triggers Rework)
+## 測試回饋迴圈
 
-After Scout submits the Usability Report, Victor reads the findings and decides:
+Scout 提交使用性報告後，Victor 讀發現並決定：
 
-1. **All Critical issues → same department**: Send directly to that department
-2. **Critical issues → multiple departments**: Start with the most upstream issue (Research > Strategy > Design > Engineering). Fix upstream first, then cascade.
-3. **No Critical issues, some Major**: Victor decides whether to fix or accept
-4. **No Critical or Major**: Proceed to Final Report
+1. **所有嚴重問題指向同一部門** → 直接退回該部門
+2. **嚴重問題指向多個部門** → 從最上游的問題開始修（研究 > 策略 > 設計 > 工程）
+3. **沒有嚴重問題，有困擾級問題** → Victor 決定修或接受
+4. **沒有嚴重或困擾級問題** → 進入最終報告
 
-After rework, Scout retests ONLY the specific issues that were flagged, not the entire product.
+重新修正後，Scout 只重新測試被標記的具體問題，不測整個產品。
 
-## Cross-Department Negotiation
+## 跨部門協商
 
-When Leo says "technically impossible" and Aria insists on the interaction:
+當 Leo 說「技術上不可行」而 Aria 堅持互動設計時：
 
-1. Victor asks Leo: "What is the closest achievable alternative?"
-2. Victor asks Aria: "Does this alternative preserve the emotional intent?"
-3. If both agree → proceed with alternative
-4. If disagreement → Victor makes the call, records the trade-off in Final Report
-
-## Final Report Structure
-
-Victor's Final Report to the Boss contains:
-
-1. **Problem & Users** — summarized from Maya's approved report
-2. **Strategic Decision** — summarized from Simon's approved brief
-3. **Interaction Design Rationale** — key decisions from Aria's spec
-4. **Prototype Status** — what Leo built, what was modified, what is simulated
-5. **Usability Findings** — Scout's key findings and how they were resolved
-6. **CEO Assessment** — Victor's honest evaluation: strengths, risks, next iteration priorities
+1. Victor 問 Leo：「最接近的可行替代方案是什麼？」
+2. Victor 問 Aria：「這個替代方案是否保留了情感意圖？」
+3. 雙方同意 → 使用替代方案
+4. 意見分歧 → Victor 做最終決定，記錄取捨於最終報告
