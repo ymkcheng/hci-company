@@ -5,16 +5,13 @@
 ## 快速開始
 
 ```bash
-# 安裝（需要先啟用 subagents）
-# 在 ~/.gemini/settings.json 中加入：
-# { "experimental": { "enableAgents": true } }
 
 # 從 GitHub 安裝
-gemini extensions install https://github.com/你的帳號/hci-company
+gemini extensions install https://github.com/ymkcheng/hci-company
 
 # 啟動
 gemini
-/hci-company:hci-company 大學生期中考前焦慮到睡不著
+/hci-company:hci-company 大學生期中考前焦慮到睡不著 (/hci-company:hci-company 你的題目)
 ```
 
 然後雙手離開鍵盤。看 Victor 帶著團隊工作。
