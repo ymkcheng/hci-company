@@ -5,7 +5,7 @@ kind: local
 tools:
   - read_file
   - write_file
-  - replace_in_file
+  - replace
   - glob
   - grep_search
   - run_shell_command
